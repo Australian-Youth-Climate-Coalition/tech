@@ -1,4 +1,7 @@
 # aycc.tech
-A simple site for AYCC activists to book trainings with our tech team
 
-[http://aycc.tech](http://aycc.tech)
+The internet home of the AYCC Tech Team.
+
+Currently focussed on connecting AYCC activists with tech team members.
+
+🌐 [http://aycc.tech](http://aycc.tech)
