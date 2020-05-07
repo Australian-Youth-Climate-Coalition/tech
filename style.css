@@ -1,6 +1,8 @@
 /* Variables */
 :root {
   --padding-side: 2rem;
+  --colour-aycc-yellow: #ffdf4f;
+  --colour-aycc-blue: #00aeef;
 }
 
 @media screen and (min-width: 769px) {
@@ -14,7 +16,7 @@
 }
 
 body {
-  background: #00aeef;
+  background: var(--colour-aycc-blue);
   color: white;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
@@ -59,14 +61,23 @@ header section p {
   font-size: 1.5rem;
 }
 
+/* Style smaller text */
+header section p.small {
+  font-size: 1rem;
+  margin-top: var(--padding-side);
+  color: #1b75bc;
+  max-width: 40ch;
+}
+
 /* Style yellow text */
-.yellow {
-  color: #ffdf4f;
+header section p.yellow {
+  color: var(--colour-aycc-yellow);
 }
 
 .typeform-widget {
   height: 100vh;
-  background-color: white;
+  background-color: var(--colour-aycc-yellow);
+  overflow: scroll;
 }
 
 /* Style finger pointer */
@@ -77,6 +88,37 @@ span#finger:before {
 @media (min-width: 769px) {
   span#finger:before {
     content: "👉";
+  }
+}
+
+span#finger {
+  animation-name: prod;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes prod {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@media (min-width: 769px) {
+  @keyframes prod {
+    0% {
+      padding-left: 0;
+    }
+    100% {
+      padding-left: 0.3rem;
+    }
   }
 }
 
