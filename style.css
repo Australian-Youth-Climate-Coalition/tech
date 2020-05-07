@@ -1,3 +1,14 @@
+/* Variables */
+:root {
+  --padding-side: 2rem;
+}
+
+@media screen and (min-width: 769px) {
+  :root {
+    --padding-side: 4rem;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +20,6 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 @media (min-width: 769px) {
@@ -33,20 +43,23 @@ header {
 
 header img {
   max-width: 10rem;
-  margin-top: 4rem;
-  margin-left: 4rem;
+  margin-top: var(--padding-side);
+  margin-left: var(--padding-side);
   margin-bottom: 2rem;
 }
+
 /* Add padding for introductory text */
 header section {
   /* z-index: 10; */
-  padding: 0 4rem;
-  margin-bottom: 4rem;
+  padding: 0 var(--padding-side);
+  margin-bottom: var(--padding-side);
 }
+
 header section p {
   font-size: 1.5rem;
 }
 
+/* Style yellow text */
 .yellow {
   color: #ffdf4f;
 }
