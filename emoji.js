@@ -1,7 +1,7 @@
-const section = document.getElementsByClassName("col")[0];
+const section = document.getElementById("emoji-container");
 
 const emojiArray = ["📟", "💥", "📲", "📣", "🚀", "🍾", "🚨", "💾", "💻"];
-const fontSizeArray = [2, 4, 4, 5, 6, 9];
+const fontSizeArray = [3, 3, 3, 2, 2, 3];
 
 function getRandomPosition(element) {
   const x = section.offsetHeight - element.clientHeight;
@@ -20,7 +20,7 @@ function placeEmoji() {
     emojiSticker.classList.add("sticker", "hidden");
     section.appendChild(emojiSticker);
     const pos = getRandomPosition(emojiSticker);
-    emojiSticker.style.top = `${pos[0]}px`;
+    // emojiSticker.style.bottom = `${pos[0]}px`;
     emojiSticker.style.left = `${pos[1]}px`;
 
     setTimeout(function () {
