@@ -3,6 +3,9 @@
   --padding-side: 2rem;
   --colour-aycc-yellow: #ffdf4f;
   --colour-aycc-blue: #00aeef;
+  --colour-aycc-blue-light: #00afef31;
+  --color-aycc-blue-dark: #1b75bc;
+  --font-size-default: 1.5rem;
 }
 
 @media screen and (min-width: 769px) {
@@ -58,15 +61,19 @@ header section {
 }
 
 header section p {
-  font-size: 1.5rem;
+  font-size: var(--font-size-default);
 }
 
 /* Style smaller text */
 header section p.small {
   font-size: 1rem;
   margin-top: var(--padding-side);
-  color: #1b75bc;
+  color: var(--color-aycc-blue-dark);
   max-width: 40ch;
+}
+
+header section p.small a {
+  color: inherit;
 }
 
 /* Style yellow text */
@@ -74,10 +81,29 @@ header section p.yellow {
   color: var(--colour-aycc-yellow);
 }
 
-.typeform-widget {
+.typeform-container {
   height: 100vh;
   background-color: white;
-  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.typeform-container a {
+  padding: 2rem;
+  height: 100%;
+  text-decoration: none;
+  font-size: var(--font-size-default);
+  color: var(--colour-aycc-blue);
+  display: flex;
+  align-items: center;
+}
+
+.typeform-container a:not(:last-of-type) {
+  border-bottom: 3px solid var(--colour-aycc-blue);
+}
+
+.typeform-container a:hover {
+  background-color: var(--colour-aycc-blue-light);
 }
 
 /* Style finger pointer */
