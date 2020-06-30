@@ -74,10 +74,16 @@ header section p.yellow {
   color: var(--colour-aycc-yellow);
 }
 
-.typeform-widget {
+.typeform-container {
   height: 100vh;
   background-color: white;
-  overflow: scroll;
+  display:flex;
+  flex-direction: column;
+}
+
+.typeform-container div {
+  flex: 1;
+  border-bottom: 3px solid var(--colour-aycc-blue);
 }
 
 /* Style finger pointer */
